@@ -33,18 +33,17 @@
 
 ## 安装
 
-### 方式一：插件市场
+### 方式一：从 Release 下载（推荐）
 
-在 DSH 的插件市场里搜 `dsh-quiz` 安装（发布后可用）。
+1. 打开 [ Releases ](https://github.com/2518763/dsh-quiz/releases)
+2. 下载最新版本的 `dsh-quiz-x.y.z.tgz`
+3. DSH 的插件管理 → 从文件安装 → 选这个 tgz
 
-### 方式二：本地 tgz
+### 方式二：从源码打包
 
 ```bash
-# 先打包
 npm pack          # 产出 dsh-quiz-0.1.0.tgz
 ```
-
-然后在 DSH 的插件管理里选择「从文件安装」，选这个 tgz。
 
 > ⚠️ 如果 DSH 版本与 `engines.dsh` 不匹配，安装器会拒绝并回滚。确认版本后再装：
 > ```bash
