@@ -1,0 +1,57 @@
+{
+  "name": "dsh-quiz",
+  "version": "0.1.0",
+  "description": "DSH 做题回炉插件：从本地资料库出题（无出处不出题）、按 DSE 题型作答、错题三阶段回炉、按考点统计正确率。",
+  "type": "module",
+  "main": "index.js",
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "cordis-plugin",
+    "quiz",
+    "flashcard",
+    "study",
+    "dse"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "lib",
+    "docs/使用说明.md",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node test/run-all.mjs",
+    "smoke": "node scripts/smoke.mjs",
+    "selftest": "node index.js --selftest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2518763/dsh-quiz.git"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  },
+  "engines": {
+    "node": ">=22",
+    "dsh": ">=0.1.7-rc.2"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-agent": "^0.2.0-rc.1",
+    "@deepseek-ai/dsh-session": "^0.2.0-rc.1"
+  },
+  "author": "Phant0Meow"
+}

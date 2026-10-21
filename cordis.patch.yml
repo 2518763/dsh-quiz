@@ -1,0 +1,7 @@
+# 这个文件必须留在仓库里：package.json 的 dsh.bundle.patch 指向它，
+# 缺了它宿主会拒绝安装（"缺少 patch 文件，请下载构建后的发布包"）。
+#
+# 这里只放"哪台机器都一样"的部分：一条 insert 声明。
+- insert:
+    - id: quiz
+      name: 'dsh-quiz'
